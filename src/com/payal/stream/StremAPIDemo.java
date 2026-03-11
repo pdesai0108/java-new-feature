@@ -3,6 +3,7 @@ package com.payal.stream;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class StremAPIDemo {
 
@@ -42,6 +43,18 @@ public class StremAPIDemo {
 		List<String> names = Arrays.asList("Alice", "Bob", "Annie", "Alex", "Charlie");
 		List<String> namesStartsWithA = names.stream().filter(name -> name.startsWith("A")).toList();
 		System.out.println("Output - " + namesStartsWithA);
+		
+		System.out.println("************");
+		
+		System.out.println("Find First Non-Repeated Character in a String");
+		System.out.println("Input - String input = \"swiss\"");
+		
+		String input = "swiss";
+		
+		Optional<Character> firstUniqueChar = input.chars().mapToObj(c -> (char) c)
+				.filter(c -> input.indexOf(c) == input.lastIndexOf(c)).findFirst();
+		
+		System.out.println("Ouput - " + firstUniqueChar);
 		
 	}
 
