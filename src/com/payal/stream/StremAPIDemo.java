@@ -46,7 +46,7 @@ public class StremAPIDemo {
 		
 		System.out.println("************");
 		
-		System.out.println("Find First Non-Repeated Character in a String");
+		System.out.println("5. Find First Non-Repeated Character in a String");
 		System.out.println("Input - String input = \"swiss\"");
 		
 		String input = "swiss";
